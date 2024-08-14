@@ -6,17 +6,17 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.footer-in{
+.footer-in-lower{
     width: 100%;
     padding: 0.8rem;
     text-align: center;
     cursor: pointer;
 }
-.footer-in p{
+.footer-in-lower p{
     font-size: 1rem;
     font-weight: 400;
 }
-.footer-in a{
+.footer-in-lower a{
     text-decoration: none;
     color: black;
 }
