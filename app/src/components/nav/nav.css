@@ -1,0 +1,28 @@
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    color: black;
+}
+.nav-in{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-in-one{
+    width: 10%;
+}
+.nav-in-two{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-in-two p{
+    font-size: 1rem;
+    font-weight: 400;
+}
