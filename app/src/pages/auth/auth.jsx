@@ -1,9 +1,10 @@
 import './auth.css';
 import React, { useState } from 'react';
-// import authImage from "../../assets/Chat.gif";
 import authImage from "../../Assets/Chat.gif";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons'; 
 
 const Auth = () => {
   const [isSignIn, setIsSignIn] = useState(false);
@@ -25,13 +26,6 @@ const Auth = () => {
       <div className="auth-container">
         <div className="auth-container-in">
           <div className="auth-container-in-one">
-          {!isSignIn && (
-            <div className="auth-logo-image">
-              <h1>SynText</h1>
-              <p>Connect Instantly, Chat Effortlessly.
-              </p>
-            </div>
-             )}
             <div className="auth-group-form">
               {isSignIn ? (
                 <form action="">
@@ -52,19 +46,19 @@ const Auth = () => {
                   <div className="auth-form-group">
                     <p>Don't have an account? <span className="auth-toggle" onClick={toggleForm}>Sign Up</span></p>
                   </div>
-                  <div className="auth-form-group">
-                  <GoogleLogin
-                        onSuccess={handleGoogleSuccess}
-                        onError={handleGoogleFailure}
+                  <div className="auth-form-group custom-google-button">
+                    <GoogleLogin
+                      onSuccess={handleGoogleSuccess}
+                      onError={handleGoogleFailure}
                     />
                   </div>
                   <div className="auth-form-group">
-                        <Link to="/" className="back-home-link">
-                            <button>
-                                <p>Back Home</p>
-                            </button>
-                        </Link>
-                    </div>
+                    <Link to="/" className="back-home-link">
+                      <button>
+                        <p>Back Home</p>
+                      </button>
+                    </Link>
+                  </div>
                 </form>
               ) : (
                 <form action="">
@@ -88,21 +82,27 @@ const Auth = () => {
                     <input id="confirm-password" type="password" placeholder="Confirm your password" />
                   </div>
                   <div className="auth-form-group">
+                    <button type="submit">Sign Up</button>
+                  </div>
+                  <div className="auth-form-group custom-google-button">
                     <GoogleLogin
-                        onSuccess={handleGoogleSuccess}
-                        onError={handleGoogleFailure}
+                      onSuccess={handleGoogleSuccess}
+                      onError={handleGoogleFailure}
                     />
                   </div>
                   <div className="auth-form-group">
-                    <button type="submit">Sign Up</button>
+                    <button>
+                      <FontAwesomeIcon icon={faPhone} /> {/* Correctly use the icon */}
+                      Sign up with number
+                    </button>
                   </div>
-                    <div className="auth-form-group">
-                        <Link to="/" className="back-home-link">
-                            <button>
-                                <p>Back Home</p>
-                            </button>
-                        </Link>
-                    </div>
+                  <div className="auth-form-group">
+                    <Link to="/" className="back-home-link">
+                      <button>
+                        <p>Back Home</p>
+                      </button>
+                    </Link>
+                  </div>
                   <div className="auth-form-group">
                     <p>Already have an account? <span className="auth-toggle" onClick={toggleForm}>Sign In</span></p>
                   </div>
@@ -113,7 +113,7 @@ const Auth = () => {
 
           <div className="auth-container-in-two">
             <div className="auth-container-two-image">
-              <img src={authImage} />
+              <img src={authImage} alt="Auth" />
             </div>
           </div>
         </div>
