@@ -1,6 +1,7 @@
 import './auth.css';
 import React, { useState } from 'react';
 import authImage from "../../Assets/auth-gif-2.gif";
+import { Link } from 'react-router-dom'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
 const Auth = () => {
@@ -49,6 +50,13 @@ const Auth = () => {
                         onError={handleGoogleFailure}
                     />
                   </div>
+                  <div className="auth-form-group">
+                        <Link to="/" className="back-home-link">
+                            <button>
+                                <p>Back Home</p>
+                            </button>
+                        </Link>
+                    </div>
                 </form>
               ) : (
                 <form action="">
@@ -80,6 +88,13 @@ const Auth = () => {
                   <div className="auth-form-group">
                     <button type="submit">Sign Up</button>
                   </div>
+                    <div className="auth-form-group">
+                        <Link to="/" className="back-home-link">
+                            <button>
+                                <p>Back Home</p>
+                            </button>
+                        </Link>
+                    </div>
                   <div className="auth-form-group">
                     <p>Already have an account? <span className="auth-toggle" onClick={toggleForm}>Sign In</span></p>
                   </div>

@@ -107,3 +107,8 @@ body{
 .auth-toggle:hover {
     color: #0056b3;
 }
+.back-home-link p{
+    font-size: 1rem;
+    font-weight: 400;
+    color:white;
+}
