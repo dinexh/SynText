@@ -1,6 +1,7 @@
 import './auth.css';
 import React, { useState } from 'react';
-import authImage from "../../Assets/auth-gif-2.gif";
+// import authImage from "../../assets/Chat.gif";
+import authImage from "../../Assets/Chat.gif";
 import { Link } from 'react-router-dom'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
@@ -39,7 +40,7 @@ const Auth = () => {
                     <input id="password-signin" type="password" placeholder="Enter your password" />
                   </div>
                   <div className="auth-form-group">
-                    <button type="submit">Sign In</button>
+                    <button className='signinbutton' type="submit">Sign In</button>
                   </div>
                   <div className="auth-form-group">
                     <p>Don't have an account? <span className="auth-toggle" onClick={toggleForm}>Sign Up</span></p>
@@ -105,7 +106,7 @@ const Auth = () => {
 
           <div className="auth-container-in-two">
             <div className="auth-container-two-image">
-              <img src={authImage} className='AuthImage' alt="Authentication" />
+              <img src={authImage} />
             </div>
           </div>
         </div>

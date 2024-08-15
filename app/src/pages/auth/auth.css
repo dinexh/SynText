@@ -1,70 +1,63 @@
-body{
+body {
     overflow: hidden;
 }
 .auth-container {
-    /* min-height: 100vh; */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* background-color: #f7f7f7; */
 }
 .auth-container-in {
-    /* height: 100vh; */
+    /* padding: 1rem; */
     width: 100%;
-    /* padding: 0.5rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    /* border-radius: 8px; */
-    /* border: #0056b3; */
-    /* border: 2px solid red; */
 }
 .auth-container-in-one {
-    /* border: 2px solid red; */
-    width: 30%;
+    /* border: 2px solid #007bff; */
+    height: auto;
+    width: 25%;
+    padding-top: 2rem;
     display: flex;
-    height: 100vh;
-    padding: 1.5rem;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    /* border-right: 2px solid grey ; */
 }
 .auth-container-in-two {
     height: 100vh;
-    /* padding: 1rem; */
-    width: 70%;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: red; */
+    background-color: #E0E1E0;
 }
 .AuthImage {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: contain;
     width: 100%;
-    height: 100vh;
-    object-fit: fill;
-    /* border-radius: 8px; */
+    /* height: max-content; */
+    /* height: 100vh; */
+    /* object-fit: cover; */
 }
 .auth-group-form {
     width: 100%;
     padding: 1rem;
 }
 .auth-form-heading {
-    margin-bottom: 2rem;
+    /* margin-bottom: 1rem; */
     text-align: center;
 }
 .auth-form-heading h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
     color: #333;
 }
 .auth-form-group {
-    margin-bottom: 1.5rem;
-    /* border: 2px solid red; */
-    /* padding: 0.3rem; */
+    margin-bottom: 1.2rem;
 }
 .auth-form-group label {
     margin-bottom: 0.5rem;
@@ -74,7 +67,7 @@ body{
 }
 .auth-form-group input {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
@@ -103,12 +96,12 @@ body{
     color: #007bff;
     cursor: pointer;
     text-decoration: underline;
-}
+}    
 .auth-toggle:hover {
     color: #0056b3;
 }
-.back-home-link p{
+.back-home-link p {
     font-size: 1rem;
     font-weight: 400;
-    color:white;
+    color: white;
 }
