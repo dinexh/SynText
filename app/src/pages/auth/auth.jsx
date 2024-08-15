@@ -3,32 +3,29 @@ import React, { useState } from 'react';
 import authImage from "../../Assets/auth-gif-2.gif";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
-const clientId = '735121826418-5b8939n6t7tj8e6d2eiesn1rhcvivfs2.apps.googleusercontent.com';
-
 const Auth = () => {
-  const [isSignIn, setIsSignIn] = useState(false); 
+  const [isSignIn, setIsSignIn] = useState(false);
 
   const toggleForm = () => {
     setIsSignIn(!isSignIn);
   };
 
   const handleGoogleSuccess = (credentialResponse) => {
-    console.log('Google Sign-In Success:', credentialResponse);
+    console.log(credentialResponse);
   };
 
   const handleGoogleFailure = (error) => {
-    console.error('Google Sign-In Error:', error);
+    console.error("Google Sign-In Error:", error);
   };
 
   return (
-    <GoogleOAuthProvider clientId= {clientId}>
+    <GoogleOAuthProvider clientId="735121826418-5b8939n6t7tj8e6d2eiesn1rhcvivfs2.apps.googleusercontent.com">
       <div className="auth-container">
         <div className="auth-container-in">
           <div className="auth-container-in-one">
             <div className="auth-group-form">
               {isSignIn ? (
-                // Sign In Form
-                <form>
+                <form action="">
                   <div className="auth-form-heading">
                     <h1>Sign In</h1>
                   </div>
@@ -47,15 +44,14 @@ const Auth = () => {
                     <p>Don't have an account? <span className="auth-toggle" onClick={toggleForm}>Sign Up</span></p>
                   </div>
                   <div className="auth-form-group">
-                    <GoogleLogin
-                      onSuccess={handleGoogleSuccess}
-                      onError={handleGoogleFailure}
+                  <GoogleLogin
+                        onSuccess={handleGoogleSuccess}
+                        onError={handleGoogleFailure}
                     />
                   </div>
                 </form>
               ) : (
-                // Sign Up Form
-                <form>
+                <form action="">
                   <div className="auth-form-heading">
                     <h1>Get Started</h1>
                   </div>
@@ -77,8 +73,8 @@ const Auth = () => {
                   </div>
                   <div className="auth-form-group">
                     <GoogleLogin
-                      onSuccess={handleGoogleSuccess}
-                      onError={handleGoogleFailure}
+                        onSuccess={handleGoogleSuccess}
+                        onError={handleGoogleFailure}
                     />
                   </div>
                   <div className="auth-form-group">
