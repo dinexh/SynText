@@ -1,0 +1,22 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+.nav-in{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-in-one{
+    width: 10%;
+}
+.nav-in-one h1{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+

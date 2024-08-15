@@ -41,7 +41,9 @@ const Auth = () => {
                     <input id="password-signin" type="password" placeholder="Enter your password" />
                   </div>
                   <div className="auth-form-group">
-                    <button className='signinbutton' type="submit">Sign In</button>
+                    <Link to="/dashboard" className="linkToDashboard">
+                      <button className="signinbutton">Sign In</button>
+                    </Link>
                   </div>
                   <div className="auth-form-group">
                     <p>Don't have an account? <span className="auth-toggle" onClick={toggleForm}>Sign Up</span></p>
@@ -92,7 +94,7 @@ const Auth = () => {
                   </div>
                   <div className="auth-form-group">
                     <button>
-                      <FontAwesomeIcon icon={faPhone} /> {/* Correctly use the icon */}
+                      <FontAwesomeIcon icon={faPhone} /> 
                       Sign up with number
                     </button>
                   </div>
