@@ -17,13 +17,24 @@ body {
     background-color: #fff;
 }
 .auth-container-in-one {
+    /* padding: 2rem; */
     /* border: 2px solid #007bff; */
-    height: auto;
+    /* height: auto; */
+    height: 100vh;
     width: 25%;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.auth-logo-image{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* border: 2px solid red; */
+    width: 90%;
+    background-color: lightgray;
+    padding: 0.8rem;
+    border-radius: 10px;
 }
 .auth-container-in-two {
     height: 100vh;

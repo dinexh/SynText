@@ -25,6 +25,13 @@ const Auth = () => {
       <div className="auth-container">
         <div className="auth-container-in">
           <div className="auth-container-in-one">
+          {!isSignIn && (
+            <div className="auth-logo-image">
+              <h1>SynText</h1>
+              <p>Connect Instantly, Chat Effortlessly.
+              </p>
+            </div>
+             )}
             <div className="auth-group-form">
               {isSignIn ? (
                 <form action="">
