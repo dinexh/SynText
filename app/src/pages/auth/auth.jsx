@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 import './auth.css';
 import authImage from "../../Assets/Chat.gif";
 import { Link } from 'react-router-dom';
@@ -21,25 +21,25 @@ const Auth = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation example
-    if (!email || !password || (!isSignIn && (!name || !confirmPassword))) {
-      toast.error("Please fill in all required fields");
-      return;
-    }
+    // // Basic validation example
+    // if (!email || !password || (!isSignIn && (!name || !confirmPassword))) {
+    //   toast.error("Please fill in all required fields");
+    //   return;
+    // }
 
-    if (!isSignIn && password !== confirmPassword) {
-      toast.error("Passwords do not match");
-      return;
-    }
+    // if (!isSignIn && password !== confirmPassword) {
+    //   toast.error("Passwords do not match");
+    //   return;
+    // }
 
-    // Add your form handling logic here
-    toast.success('Form submitted successfully!');
-    console.log('Form submitted', { email, password, name, confirmPassword });
+    // // Add your form handling logic here
+    // toast.success('Form submitted successfully!');
+    // console.log('Form submitted', { email, password, name, confirmPassword });
   };
 
   return (
     <div className="auth-container">
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <div className="auth-container-in">
         <div className="auth-container-in-one">
           <div className="auth-group-form">
