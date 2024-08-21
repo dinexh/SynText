@@ -26,7 +26,7 @@ const Home = () => {
       </div>
       <div className="home-footer">
         <div className="home-footer-in">
-          <p>Designed and Developed by <a href="#">Dinesh Korukonda</a> | All Rights Reserved</p>
+          <p>Designed and Developed by <a href="/">Dinesh Korukonda</a> | All Rights Reserved</p>
         </div>
       </div>
     </div>

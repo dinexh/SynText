@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 import './auth.css';
 import authImage from "../../Assets/Chat.gif";
 import { Link } from 'react-router-dom';
@@ -130,7 +128,13 @@ const Auth = () => {
                 <div className="auth-form-group">
                   <button type="submit">Sign Up</button>
                 </div>
-                <div className="auth-form-group" id="phone">
+                <div className="auth-form-group-google">
+                  <button>Sign in with google</button>
+                </div>
+                <div className="auth-form-group-github">
+                  <button>Sign with github</button>
+                </div>
+                <div className="auth-form-group-number" id="phone">
                   <button>
                     <FontAwesomeIcon icon={faPhone} /> 
                     Sign up with number
